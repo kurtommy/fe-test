@@ -1,11 +1,11 @@
 export function routerConfig ($stateProvider, $urlRouterProvider) {
   'ngInject';
   $stateProvider
-    .state('home', {
+    .state('test', {
       url: '/',
-      templateUrl: 'app/main/main.html',
-      controller: 'MainController',
-      controllerAs: 'main'
+      templateUrl: 'app/test/test.html',
+      controller: 'TestController',
+      controllerAs: 'test'
     });
 
   $urlRouterProvider.otherwise('/');
