@@ -1,5 +1,4 @@
-# Instruction
-
+## Front end test
 ### Instructions
 1. Fetch this repo in your github account.
 2. Make a new branch called test-me and add your stuff there.
