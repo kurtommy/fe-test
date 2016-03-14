@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
+
 /* variables */
 $grid-gutter-width: 8px;
 $primary-color: #C90C0F;
@@ -11,7 +12,9 @@ $bg-color: #eee;
 $gray-color: #bababa;
 $social-size: 30px;
 $heading-font-size: 18px;
+$semibold-width: 600;
 
+$pagination-active-bg: $primary-color !important;
 /* different settings for other resolutions */
 
 body {
@@ -19,15 +22,15 @@ body {
   color: $main-color;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
+/* set max-width to match provided layout */
 .container {
   max-width: 880px;
 }
-
+/* reusables */
 .heading {
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: $semibold-width;
   letter-spacing: 2px;
   color: $main-color;
 }
@@ -191,25 +194,26 @@ body {
     }
   }
 }
+/* bootstrap table */
+.table{
+  box-shadow: 0 0 10px rgba($main-color, .1);
 
-.table > tbody > tr > th {
-  @extend .heading;
-
-  background: $primary-color;
-  color: $white;
-  padding: 10px 20px;
-
+  > tbody > tr > td {
+    border: none;
+    padding: 10px 15px;
+  }
+  > tbody > tr > th {
+     @extend .heading;
+     background: $primary-color;
+     color: $white;
+     padding: 10px 20px;
+   }
 }
-
-.table > tbody > tr > td {
-  border: none;
-  padding: 10px 15px;
-}
-
-.table-striped > tbody > tr:nth-of-type(even) {
-  background-color: #F3F3F3;
-}
-
-.table-striped > tbody > tr:nth-of-type(odd) {
-  background-color: #FFF;
+.table-striped {
+  > tbody > tr:nth-of-type(odd) {
+    background-color: #F3F3F3;
+  }
+  > tbody > tr:nth-of-type(even) {
+    background-color: $white;
+  }
 }
