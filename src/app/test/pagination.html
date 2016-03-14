@@ -1,8 +1,17 @@
+<div class="pagination_wrapper text-center">
+  <uib-pagination total-items="amount" ng-model="page" class="pagination-sm" previous-text="prev" next-text="next" rotate="true" force-ellipses="true"></uib-pagination>
+</div>
 <table class="table table-striped">
+  <tr>
+    <th>Model</th>
+    <th>Year</th>
+  </tr>
   <tr ng-repeat="car in filteredCars">
     <td>{{car.maker}}</td>
     <td>{{car.model}}</td>
   </tr>
 </table>
-<uib-pagination total-items="amount" ng-model="page" class="pagination-sm" previous-text="prev" next-text="next" first-text="first" last-text="last"></uib-pagination>
-<div class="pagination_info">Amount: {{amount}}, page: {{page}} / {{pages}}, per page: {{per_page}}</div>
+<div class="pagination_wrapper text-center">
+  <uib-pagination total-items="amount" ng-model="page" class="pagination-sm" previous-text="prev" next-text="next" rotate="true" force-ellipses="true"></uib-pagination>
+  <div class="pagination_info">Amount: {{amount}}, page: {{page}} / {{pages}}, per page: {{per_page}}</div>
+</div>

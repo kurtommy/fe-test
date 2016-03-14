@@ -6,7 +6,7 @@ export class TestController {
     this.rc_service = raceCarService;
 
     // load random amount of cars from service - for pagination testing
-    this.cars = this.loadCars(Math.random()*100 + 100);
+    this.cars = this.loadCars(Math.random()*100);
 
     //scope
     $scope.cars = this.cars;

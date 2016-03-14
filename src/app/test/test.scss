@@ -1,0 +1,215 @@
+/* todo: move to gulp task */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+
+/* variables */
+$grid-gutter-width: 8px;
+$primary-color: #C90C0F;
+$main-color: #333;
+$white: #fff;
+$bg-color: #eee;
+$gray-color: #bababa;
+$social-size: 30px;
+$heading-font-size: 18px;
+
+/* different settings for other resolutions */
+
+body {
+  background-color: $bg-color;
+  color: $main-color;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  max-width: 880px;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: $main-color;
+}
+
+.header {
+  background: $white;
+  font-size: 40px;
+  font-weight: 900;
+  height: 80px;
+  line-height: 80px;
+
+  .container {
+    position: relative;
+
+    .fa {
+      color: $gray-color;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .search {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .title {
+    text-align: center;
+    color: $primary-color;
+    text-transform: uppercase;
+
+    @media (max-width: $screen-xs-max)
+    {
+      font-size: 24px;
+    }
+  }
+}
+
+.prev_next_navi {
+  margin: 20px 0;
+
+  a {
+    color: $primary-color;
+    font-weight: 600;
+  }
+}
+
+.main_wrapper {
+  .main {
+    /* inherit */
+    @include make-xs-column(12);
+    @include make-sm-column(8);
+    @include make-md-column(8);
+
+    .page_header {
+      position: relative;
+      margin-bottom: 30px;
+
+      .title {
+        @extend .heading;
+
+        span {
+          color: $primary-color;
+        }
+      }
+      .subtitle {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: underline;
+        color: $primary-color;
+      }
+      .search {
+        position: absolute;
+        top: 20px;
+        right: 0;
+
+        @media (max-width: $screen-xs-max)
+        {
+          @include make-xs-column(12);
+          position: static;
+          padding: 10px;
+          text-align: center;
+        }
+        * {
+          height: 35px;
+          line-height:35px;
+          margin: 0;
+        }
+        label {
+          @extend .subtitle;
+
+          text-decoration: none;
+          color: $gray-color;
+          margin-right: 15px;
+        }
+        input[type=text] {
+          border: 1px solid $gray-color;
+          background: $bg-color;
+          padding: 0 10px;
+          width: 150px;
+        }
+      }
+    }
+
+  }
+  .sidebar {
+    @include make-xs-column(12);
+    @include make-sm-column(4);
+    @include make-md-column(4);
+
+    margin-top: 30px;
+
+    .widget {
+
+      background: $main-color;
+      padding: 25px 10px;
+
+      &.special {
+        background: $primary-color;
+      }
+
+      .title {
+        @extend .heading;
+
+        color: $white;
+
+        text-align: center;
+        padding: 0 20px 20px 20px;
+      }
+
+      .content {
+        text-align: center;
+
+        .socials {
+          display: inline-block;
+          margin: 0;
+          padding: 0;
+
+          li {
+            float: left;
+            list-style: none;
+            padding: 0 10px;
+            border-right: 1px solid lighten($primary-color, 5);
+
+            &:last-child {
+              border: none;
+            }
+            .fa {
+              color: $white;
+              font-size: $social-size;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.table > tbody > tr > th {
+  @extend .heading;
+
+  background: $primary-color;
+  color: $white;
+  padding: 10px 20px;
+
+}
+
+.table > tbody > tr > td {
+  border: none;
+  padding: 10px 15px;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #F3F3F3;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #FFF;
+}
