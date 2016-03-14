@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 
-
 /* variables */
 $grid-gutter-width: 8px;
 $primary-color: #C90C0F;
@@ -14,7 +13,6 @@ $social-size: 30px;
 $heading-font-size: 18px;
 $semibold-width: 600;
 
-$pagination-active-bg: $primary-color !important;
 /* different settings for other resolutions */
 
 body {
@@ -22,10 +20,12 @@ body {
   color: $main-color;
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 /* set max-width to match provided layout */
 .container {
   max-width: 880px;
 }
+
 /* reusables */
 .heading {
   text-transform: uppercase;
@@ -65,8 +65,7 @@ body {
     color: $primary-color;
     text-transform: uppercase;
 
-    @media (max-width: $screen-xs-max)
-    {
+    @media (max-width: $screen-xs-max) {
       font-size: 24px;
     }
   }
@@ -112,8 +111,7 @@ body {
         top: 20px;
         right: 0;
 
-        @media (max-width: $screen-xs-max)
-        {
+        @media (max-width: $screen-xs-max) {
           @include make-xs-column(12);
           position: static;
           padding: 10px;
@@ -121,7 +119,7 @@ body {
         }
         * {
           height: 35px;
-          line-height:35px;
+          line-height: 35px;
           margin: 0;
         }
         label {
@@ -194,8 +192,9 @@ body {
     }
   }
 }
+
 /* bootstrap table */
-.table{
+.table {
   box-shadow: 0 0 10px rgba($main-color, .1);
 
   > tbody > tr > td {
@@ -203,12 +202,13 @@ body {
     padding: 10px 15px;
   }
   > tbody > tr > th {
-     @extend .heading;
-     background: $primary-color;
-     color: $white;
-     padding: 10px 20px;
-   }
+    @extend .heading;
+    background: $primary-color;
+    color: $white;
+    padding: 10px 20px;
+  }
 }
+
 .table-striped {
   > tbody > tr:nth-of-type(odd) {
     background-color: #F3F3F3;
