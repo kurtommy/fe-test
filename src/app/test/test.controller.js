@@ -6,10 +6,14 @@ export class TestController {
     this.rc_service = raceCarService;
 
     // load data
-    this.cars = this.loadCars(100);
+    this.cars = this.loadCars(299);
 
-
-    //$scope.cars = this.cars;
+    //scope
+    $scope.cars = this.cars;
+    $scope.amount = this.cars.length;
+    $scope.page = 1;
+    $scope.per_page = 10;
+    $scope.pages = Math.ceil($scope.amount / $scope.per_page);
   }
 
   loadCars(howMany)
