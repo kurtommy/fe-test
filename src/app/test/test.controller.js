@@ -1,5 +1,5 @@
 export class TestController {
-  constructor(raceCarService) {
+  constructor($scope, raceCarService) {
     'ngInject';
 
     this.cars = [];
@@ -8,10 +8,8 @@ export class TestController {
     // load data
     this.cars = this.loadCars(100);
 
-    console.log(this.cars);
 
-
-
+    //$scope.cars = this.cars;
   }
 
   loadCars(howMany)
