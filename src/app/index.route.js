@@ -3,9 +3,9 @@ export function routerConfig ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('test', {
       url: '/',
-      templateUrl: 'app/test/test.html',
-      controller: 'TestController',
-      controllerAs: 'test'
+      templateUrl: 'app/test-me/test-me.html',
+      controller: 'TestMeController',
+      controllerAs: 'testMe'
     });
 
   $urlRouterProvider.otherwise('/');

@@ -1,7 +1,7 @@
 import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { runBlock } from './index.run';
-import { TestController } from './test/test.controller';
+import { TestMeController } from './test-me/test-me.controller';
 import { RaceCarService } from '../app/components/race-car/race-car.service';
 
 angular.module('feTest',
@@ -10,4 +10,4 @@ angular.module('feTest',
   .config(routerConfig)
   .run(runBlock)
   .service('raceCarService', RaceCarService)
-  .controller('TestController', TestController);
+  .controller('TestMeController', TestMeController);
