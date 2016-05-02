@@ -1,0 +1,12 @@
+<table class="table">
+  <tr>
+    <th class="col-md-5 col-sm-5  letter_spacing ">MAKER&nbsp;<img src="https://raw.githubusercontent.com/Anastazja/img/8ffcca52f9c1998b2069f44f504293facb6811a3/tr.png">
+    </th>
+    <th class="col-md-5 col-sm-5 letter_spacing">MODELLO&nbsp;<img src="https://raw.githubusercontent.com/Anastazja/img/8ffcca52f9c1998b2069f44f504293facb6811a3/tr.png"></th>
+  </tr>
+  <tr dir-paginate="car in cars | itemsPerPage: 5">
+    <td class="col-md-5 col-sm-5">{{car.maker}}</td>
+    <td class="col-md-5 col-sm-5">{{car.model}}</td>
+  </tr>
+</table>
+<dir-pagination-controls></dir-pagination-controls>
