@@ -1,4 +1,11 @@
 ## Front end test
+
+###Install and run
+you need node.js
+- npm install -g gulp
+- npm install -b bower
+- gulp serve
+
 ### Instructions
 1. Fetch this repo in your github account.
 2. Make a new branch called test-me and add your stuff there.
@@ -6,7 +13,7 @@
 4. You have max 3 hours.
 
 ### Infos
-1. Default route is `/` which load `TestMeController` controller, and display `test-me.html` view.
+1. Default route is `/` which loads `TestMeController` controller, and display `test-me.html` view.
 2. You must indent your code, follow the .editorconfig and .eslint rules.
 
 ### HTML and CSS part - Todo:
